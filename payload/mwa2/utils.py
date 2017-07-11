@@ -38,8 +38,7 @@ def pref(pref_name):
     """
     default_prefs = {
         'ServerURL': 'http://munkiwebadmin',
-        'user': 'report',
-        'pass': '',
+        'authKey': '',
     }
     pref_value = CFPreferencesCopyAppValue(pref_name, BUNDLE_ID)
     if pref_value == None:
@@ -54,11 +53,10 @@ def pref(pref_name):
     return pref_value
 
 def send_data(url, data, auth):
-    
-    return requests.post(pref('ServerURL') + url, data=data, auth=auth)
+    return requests.post(pref('ServerURL') + url, data=data, headers={'Authorization': pref('authKey')})
 
 def mwa_available():
-    """ """
+    """ check if server available """
     try:
         urllib2.urlopen(pref('ServerURL'), timeout=1)
         return True
