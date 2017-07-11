@@ -5,7 +5,6 @@ import subprocess
 import plistlib
 import base64
 import bz2
-import os
 
 from mwa2 import utils
 

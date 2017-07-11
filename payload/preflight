@@ -3,7 +3,6 @@
 import sys
 import subprocess
 import plistlib
-import os
 
 from mwa2 import utils
 
