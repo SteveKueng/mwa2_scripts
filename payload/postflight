@@ -5,6 +5,7 @@ import subprocess
 import plistlib
 import base64
 import bz2
+import os
 
 from mwa2 import utils
 
@@ -49,6 +50,7 @@ def main():
         
         serialNumber = hardwareinfo["SPHardwareDataType"][0]["serial_number"]
         clientName = utils.get_comnputer_name()
+        
         url = "/api/report/" + serialNumber
 
         data = {"runtype": RUNTYPE, "submission_type": "postflight", "name": clientName, "base64bz2report": report}

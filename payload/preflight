@@ -3,6 +3,7 @@
 import sys
 import subprocess
 import plistlib
+import os
 
 from mwa2 import utils
 
@@ -23,6 +24,7 @@ def get_hardware_info():
     except BaseException:
         return {}
 
+
 def main():
     """ main """
     if utils.mwa_available():
@@ -31,7 +33,7 @@ def main():
             RUNTYPE = sys.argv[1]
 
         serialNumber = get_hardware_info().serial_number
-        clientName = get_comnputer_name()
+        clientName = utils.get_comnputer_name()
 
         url = "/api/report/" + serialNumber
         data = {"runtype": RUNTYPE, "submission_type": "preflight", "name": clientName}

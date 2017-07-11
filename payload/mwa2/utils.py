@@ -3,6 +3,7 @@
 
 import subprocess
 import urllib2
+import requests
 from Foundation import *
 
 
@@ -41,7 +42,7 @@ def pref(pref_name):
         'authKey': '',
     }
     pref_value = CFPreferencesCopyAppValue(pref_name, BUNDLE_ID)
-    if pref_value == None:
+    if pref_value is None:
         pref_value = default_prefs.get(pref_name)
         # we're using a default value. We'll write it out to
         # /Library/Preferences/<BUNDLE_ID>.plist for admin
@@ -52,7 +53,7 @@ def pref(pref_name):
         pref_value = str(pref_value)
     return pref_value
 
-def send_data(url, data, auth):
+def send_data(url, data):
     return requests.post(pref('ServerURL') + url, data=data, headers={'Authorization': pref('authKey')})
 
 def mwa_available():
