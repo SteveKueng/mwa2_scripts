@@ -30,36 +30,32 @@ def get_hardware_info():
 
 def main():
     """ main """
-    if utils.mwa_available():
-        RUNTYPE = "unknown"
-        if len(sys.argv) == 2:
-            RUNTYPE = sys.argv[1]
+    RUNTYPE = "unknown"
+    if len(sys.argv) == 2:
+        RUNTYPE = sys.argv[1]
 
-        REPORTPATH = "/Library/Managed Installs/ManagedInstallReport.plist"
-        reportPlist = plistlib.readPlist(REPORTPATH)
+    REPORTPATH = "/Library/Managed Installs/ManagedInstallReport.plist"
+    reportPlist = plistlib.readPlist(REPORTPATH)
 
-        hardwareinfo = get_hardware_info()
+    hardwareinfo = get_hardware_info()
 
-        reportPlist["MachineInfo"]["SystemProfile"] = list()
-        reportPlist["MachineInfo"]["SystemProfile"] = [hardwareinfo]
+    reportPlist["MachineInfo"]["SystemProfile"] = list()
+    reportPlist["MachineInfo"]["SystemProfile"] = [hardwareinfo]
 
-        bz2report = bz2.compress(plistlib.writePlistToString(reportPlist))
-        base64bz2report = base64.b64encode(bz2report)
-        report = base64bz2report.replace(" ", "+")
-        
-        serialNumber = hardwareinfo["SPHardwareDataType"][0]["serial_number"]
-        clientName = utils.get_comnputer_name()
-        
-        url = "/api/report/" + serialNumber
+    bz2report = bz2.compress(plistlib.writePlistToString(reportPlist))
+    base64bz2report = base64.b64encode(bz2report)
+    report = base64bz2report.replace(" ", "+")
+    
+    serialNumber = hardwareinfo["SPHardwareDataType"][0]["serial_number"]
+    clientName = utils.get_comnputer_name()
+    
+    url = "/api/report/" + serialNumber
 
-        data = {"runtype": RUNTYPE, "submission_type": "postflight", "name": clientName, "base64bz2report": report}
-        
-        resc = utils.send_data(url, data)
-        if resc.status_code != 204:
-            raise BaseException
-    else:
-        print "munki not available"
-        sys.exit(1)
+    data = {"runtype": RUNTYPE, "submission_type": "postflight", "name": clientName, "base64bz2report": report}
+    
+    resc = utils.send_data(url, data)
+    if resc.status_code != 204:
+        raise BaseException
 
 if __name__ == "__main__":
     main()

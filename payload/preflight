@@ -26,23 +26,19 @@ def get_hardware_info():
 
 def main():
     """ main """
-    if utils.mwa_available():
-        RUNTYPE = "unknown"
-        if len(sys.argv) == 2:
-            RUNTYPE = sys.argv[1]
+    RUNTYPE = "unknown"
+    if len(sys.argv) == 2:
+        RUNTYPE = sys.argv[1]
 
-        serialNumber = get_hardware_info().serial_number
-        clientName = utils.get_comnputer_name()
+    serialNumber = get_hardware_info().serial_number
+    clientName = utils.get_comnputer_name()
 
-        url = "/api/report/" + serialNumber
-        data = {"runtype": RUNTYPE, "submission_type": "preflight", "name": clientName}
+    url = "/api/report/" + serialNumber
+    data = {"runtype": RUNTYPE, "submission_type": "preflight", "name": clientName}
 
-        resc = utils.send_data(url, data)
-        if resc.status_code != 204:
-            raise BaseException
-    else:
-        print "munki not available"
-        sys.exit(1)
+    resc = utils.send_data(url, data)
+    if resc.status_code != 204:
+        raise BaseException
 
 if __name__ == "__main__":
     main()
