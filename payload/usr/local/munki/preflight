@@ -38,7 +38,8 @@ def main():
 
     resc = utils.send_data(url, data)
     if resc.status_code != 204:
-        raise BaseException
+        print("send data error: %s", resc.status_code)
+        pass
 
 if __name__ == "__main__":
     main()
