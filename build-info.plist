@@ -7,7 +7,7 @@
 	<key>identifier</key>
 	<string>com.github.stevekueng.munkiscripts</string>
 	<key>install_location</key>
-	<string>/usr/local/munki</string>
+	<string>/</string>
 	<key>name</key>
 	<string>munkiscripts-${version}.pkg</string>
 	<key>ownership</key>
@@ -17,6 +17,6 @@
 	<key>suppress_bundle_relocation</key>
 	<true/>
 	<key>version</key>
-	<string>2.5</string>
+	<string>2.6</string>
 </dict>
 </plist>

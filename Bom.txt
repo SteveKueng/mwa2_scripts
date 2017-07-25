@@ -1,7 +1,126 @@
 .	40755	0/0
-./mwa2	40755	0/0
-./mwa2/__init__.py	100644	0/0	0	4294967295
-./mwa2/utils.py	100644	0/0	2604	503158179
-./postflight	100755	0/0	2231	828169172
-./preflight	100755	0/0	1368	672230305
-./report_broken_client	100755	0/0	1356	3892103770
+./Library	40755	0/0
+./Library/Python	40755	0/0
+./Library/Python/2.7	40755	0/0
+./Library/Python/2.7/site-packages	40755	0/0
+./Library/Python/2.7/site-packages/requests	40755	0/0
+./Library/Python/2.7/site-packages/requests/__init__.py	100644	0/0	2197	3200144206
+./Library/Python/2.7/site-packages/requests/_internal_utils.py	100644	0/0	1096	3696298062
+./Library/Python/2.7/site-packages/requests/adapters.py	100644	0/0	19727	2461741207
+./Library/Python/2.7/site-packages/requests/api.py	100644	0/0	5987	4061520024
+./Library/Python/2.7/site-packages/requests/auth.py	100644	0/0	9541	1359743491
+./Library/Python/2.7/site-packages/requests/cacert.pem	100644	0/0	348799	3640875334
+./Library/Python/2.7/site-packages/requests/certs.py	100644	0/0	625	1260660768
+./Library/Python/2.7/site-packages/requests/compat.py	100644	0/0	1627	4043446153
+./Library/Python/2.7/site-packages/requests/cookies.py	100644	0/0	18291	1682348932
+./Library/Python/2.7/site-packages/requests/exceptions.py	100644	0/0	2976	117372825
+./Library/Python/2.7/site-packages/requests/hooks.py	100644	0/0	767	1238895791
+./Library/Python/2.7/site-packages/requests/models.py	100644	0/0	32616	484424851
+./Library/Python/2.7/site-packages/requests/packages	40755	0/0
+./Library/Python/2.7/site-packages/requests/packages/__init__.py	100644	0/0	1494	2823599886
+./Library/Python/2.7/site-packages/requests/packages/chardet	40755	0/0
+./Library/Python/2.7/site-packages/requests/packages/chardet/__init__.py	100644	0/0	1295	1384549765
+./Library/Python/2.7/site-packages/requests/packages/chardet/big5freq.py	100644	0/0	82594	951218620
+./Library/Python/2.7/site-packages/requests/packages/chardet/big5prober.py	100644	0/0	1684	801978554
+./Library/Python/2.7/site-packages/requests/packages/chardet/chardetect.py	100644	0/0	2504	4102111230
+./Library/Python/2.7/site-packages/requests/packages/chardet/chardistribution.py	100644	0/0	9226	400909365
+./Library/Python/2.7/site-packages/requests/packages/chardet/charsetgroupprober.py	100644	0/0	3791	3318690038
+./Library/Python/2.7/site-packages/requests/packages/chardet/charsetprober.py	100644	0/0	1902	3280991922
+./Library/Python/2.7/site-packages/requests/packages/chardet/codingstatemachine.py	100644	0/0	2318	2380443103
+./Library/Python/2.7/site-packages/requests/packages/chardet/compat.py	100644	0/0	1157	2117722776
+./Library/Python/2.7/site-packages/requests/packages/chardet/constants.py	100644	0/0	1335	2902915058
+./Library/Python/2.7/site-packages/requests/packages/chardet/cp949prober.py	100644	0/0	1782	2434533761
+./Library/Python/2.7/site-packages/requests/packages/chardet/escprober.py	100644	0/0	3187	1729304333
+./Library/Python/2.7/site-packages/requests/packages/chardet/escsm.py	100644	0/0	7839	1751997349
+./Library/Python/2.7/site-packages/requests/packages/chardet/eucjpprober.py	100644	0/0	3678	578380113
+./Library/Python/2.7/site-packages/requests/packages/chardet/euckrfreq.py	100644	0/0	45978	2226086826
+./Library/Python/2.7/site-packages/requests/packages/chardet/euckrprober.py	100644	0/0	1675	4228917352
+./Library/Python/2.7/site-packages/requests/packages/chardet/euctwfreq.py	100644	0/0	34872	986213187
+./Library/Python/2.7/site-packages/requests/packages/chardet/euctwprober.py	100644	0/0	1676	2699168992
+./Library/Python/2.7/site-packages/requests/packages/chardet/gb2312freq.py	100644	0/0	36011	3695755835
+./Library/Python/2.7/site-packages/requests/packages/chardet/gb2312prober.py	100644	0/0	1681	1163945164
+./Library/Python/2.7/site-packages/requests/packages/chardet/hebrewprober.py	100644	0/0	13359	2406225483
+./Library/Python/2.7/site-packages/requests/packages/chardet/jisfreq.py	100644	0/0	47315	389468728
+./Library/Python/2.7/site-packages/requests/packages/chardet/jpcntx.py	100644	0/0	19348	1390801984
+./Library/Python/2.7/site-packages/requests/packages/chardet/langbulgarianmodel.py	100644	0/0	12784	3945552622
+./Library/Python/2.7/site-packages/requests/packages/chardet/langcyrillicmodel.py	100644	0/0	17725	2144743084
+./Library/Python/2.7/site-packages/requests/packages/chardet/langgreekmodel.py	100644	0/0	12628	2294210161
+./Library/Python/2.7/site-packages/requests/packages/chardet/langhebrewmodel.py	100644	0/0	11318	2321856289
+./Library/Python/2.7/site-packages/requests/packages/chardet/langhungarianmodel.py	100644	0/0	12536	2076319192
+./Library/Python/2.7/site-packages/requests/packages/chardet/langthaimodel.py	100644	0/0	11275	4190106282
+./Library/Python/2.7/site-packages/requests/packages/chardet/latin1prober.py	100644	0/0	5232	922786194
+./Library/Python/2.7/site-packages/requests/packages/chardet/mbcharsetprober.py	100644	0/0	3268	2481041136
+./Library/Python/2.7/site-packages/requests/packages/chardet/mbcsgroupprober.py	100644	0/0	1967	2058932927
+./Library/Python/2.7/site-packages/requests/packages/chardet/mbcssm.py	100644	0/0	19590	1467925756
+./Library/Python/2.7/site-packages/requests/packages/chardet/sbcharsetprober.py	100644	0/0	4793	615811272
+./Library/Python/2.7/site-packages/requests/packages/chardet/sbcsgroupprober.py	100644	0/0	3291	3055486607
+./Library/Python/2.7/site-packages/requests/packages/chardet/sjisprober.py	100644	0/0	3764	2704830729
+./Library/Python/2.7/site-packages/requests/packages/chardet/universaldetector.py	100644	0/0	6840	1570911772
+./Library/Python/2.7/site-packages/requests/packages/chardet/utf8prober.py	100644	0/0	2652	4160432071
+./Library/Python/2.7/site-packages/requests/packages/idna	40755	0/0
+./Library/Python/2.7/site-packages/requests/packages/idna/__init__.py	100644	0/0	20	2501480192
+./Library/Python/2.7/site-packages/requests/packages/idna/codec.py	100644	0/0	3299	650450450
+./Library/Python/2.7/site-packages/requests/packages/idna/compat.py	100644	0/0	232	2810499655
+./Library/Python/2.7/site-packages/requests/packages/idna/core.py	100644	0/0	11352	925284795
+./Library/Python/2.7/site-packages/requests/packages/idna/idnadata.py	100644	0/0	35172	441534240
+./Library/Python/2.7/site-packages/requests/packages/idna/intranges.py	100644	0/0	1521	4035744778
+./Library/Python/2.7/site-packages/requests/packages/idna/uts46data.py	100644	0/0	181224	344733525
+./Library/Python/2.7/site-packages/requests/packages/urllib3	40755	0/0
+./Library/Python/2.7/site-packages/requests/packages/urllib3/__init__.py	100644	0/0	2855	389957714
+./Library/Python/2.7/site-packages/requests/packages/urllib3/_collections.py	100644	0/0	10553	4060109357
+./Library/Python/2.7/site-packages/requests/packages/urllib3/connection.py	100644	0/0	12593	3267459766
+./Library/Python/2.7/site-packages/requests/packages/urllib3/connectionpool.py	100644	0/0	33934	2992210492
+./Library/Python/2.7/site-packages/requests/packages/urllib3/contrib	40755	0/0
+./Library/Python/2.7/site-packages/requests/packages/urllib3/contrib/__init__.py	100644	0/0	0	4294967295
+./Library/Python/2.7/site-packages/requests/packages/urllib3/contrib/appengine.py	100644	0/0	10865	354101187
+./Library/Python/2.7/site-packages/requests/packages/urllib3/contrib/ntlmpool.py	100644	0/0	4478	3187031186
+./Library/Python/2.7/site-packages/requests/packages/urllib3/contrib/pyopenssl.py	100644	0/0	14351	2585407972
+./Library/Python/2.7/site-packages/requests/packages/urllib3/contrib/socks.py	100644	0/0	5830	793475255
+./Library/Python/2.7/site-packages/requests/packages/urllib3/exceptions.py	100644	0/0	6488	51803585
+./Library/Python/2.7/site-packages/requests/packages/urllib3/fields.py	100644	0/0	5943	1873680026
+./Library/Python/2.7/site-packages/requests/packages/urllib3/filepost.py	100644	0/0	2321	118991371
+./Library/Python/2.7/site-packages/requests/packages/urllib3/packages	40755	0/0
+./Library/Python/2.7/site-packages/requests/packages/urllib3/packages/__init__.py	100644	0/0	109	960713005
+./Library/Python/2.7/site-packages/requests/packages/urllib3/packages/backports	40755	0/0
+./Library/Python/2.7/site-packages/requests/packages/urllib3/packages/backports/__init__.py	100644	0/0	0	4294967295
+./Library/Python/2.7/site-packages/requests/packages/urllib3/packages/backports/makefile.py	100644	0/0	1461	76700871
+./Library/Python/2.7/site-packages/requests/packages/urllib3/packages/ordered_dict.py	100644	0/0	8935	938811151
+./Library/Python/2.7/site-packages/requests/packages/urllib3/packages/six.py	100644	0/0	30098	3147264201
+./Library/Python/2.7/site-packages/requests/packages/urllib3/packages/ssl_match_hostname	40755	0/0
+./Library/Python/2.7/site-packages/requests/packages/urllib3/packages/ssl_match_hostname/__init__.py	100644	0/0	688	2568555645
+./Library/Python/2.7/site-packages/requests/packages/urllib3/packages/ssl_match_hostname/_implementation.py	100644	0/0	5702	2693414721
+./Library/Python/2.7/site-packages/requests/packages/urllib3/poolmanager.py	100644	0/0	13052	1784594265
+./Library/Python/2.7/site-packages/requests/packages/urllib3/request.py	100644	0/0	5946	3923982925
+./Library/Python/2.7/site-packages/requests/packages/urllib3/response.py	100644	0/0	22662	1365494752
+./Library/Python/2.7/site-packages/requests/packages/urllib3/util	40755	0/0
+./Library/Python/2.7/site-packages/requests/packages/urllib3/util/__init__.py	100644	0/0	892	1693952428
+./Library/Python/2.7/site-packages/requests/packages/urllib3/util/connection.py	100644	0/0	4745	4260434678
+./Library/Python/2.7/site-packages/requests/packages/urllib3/util/request.py	100644	0/0	2128	2709892656
+./Library/Python/2.7/site-packages/requests/packages/urllib3/util/response.py	100644	0/0	2343	3773951790
+./Library/Python/2.7/site-packages/requests/packages/urllib3/util/retry.py	100644	0/0	13508	194321011
+./Library/Python/2.7/site-packages/requests/packages/urllib3/util/ssl_.py	100644	0/0	12046	4197713101
+./Library/Python/2.7/site-packages/requests/packages/urllib3/util/timeout.py	100644	0/0	9804	1426409966
+./Library/Python/2.7/site-packages/requests/packages/urllib3/util/url.py	100644	0/0	6289	3171179379
+./Library/Python/2.7/site-packages/requests/sessions.py	100644	0/0	26216	479411370
+./Library/Python/2.7/site-packages/requests/status_codes.py	100644	0/0	3316	386420426
+./Library/Python/2.7/site-packages/requests/structures.py	100644	0/0	3012	3655758228
+./Library/Python/2.7/site-packages/requests/utils.py	100644	0/0	24827	711073645
+./Library/Python/2.7/site-packages/requests-2.12.5.dist-info	40755	0/0
+./Library/Python/2.7/site-packages/requests-2.12.5.dist-info/DESCRIPTION.rst	100644	0/0	42648	564196857
+./Library/Python/2.7/site-packages/requests-2.12.5.dist-info/INSTALLER	100644	0/0	4	251000266
+./Library/Python/2.7/site-packages/requests-2.12.5.dist-info/METADATA	100644	0/0	43873	4113582530
+./Library/Python/2.7/site-packages/requests-2.12.5.dist-info/RECORD	100644	0/0	13271	2612373041
+./Library/Python/2.7/site-packages/requests-2.12.5.dist-info/WHEEL	100644	0/0	110	4184882375
+./Library/Python/2.7/site-packages/requests-2.12.5.dist-info/metadata.json	100644	0/0	1360	730400575
+./Library/Python/2.7/site-packages/requests-2.12.5.dist-info/top_level.txt	100644	0/0	9	4070635661
+./usr	40755	0/0
+./usr/local	40755	0/0
+./usr/local/munki	40755	0/0
+./usr/local/munki/mwa2	40755	0/0
+./usr/local/munki/mwa2/.___init__.py	100644	0/0	0	0
+./usr/local/munki/mwa2/._utils.py	100644	0/0	0	0
+./usr/local/munki/mwa2/__init__.py	100644	0/0	0	4294967295
+./usr/local/munki/mwa2/utils.py	100644	0/0	2614	1125450749
+./usr/local/munki/postflight	100755	0/0	2060	2943281444
+./usr/local/munki/preflight	100755	0/0	1239	1983996639
+./usr/local/munki/report_broken_client	100755	0/0	1220	3135672577
