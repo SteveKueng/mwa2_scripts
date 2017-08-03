@@ -49,9 +49,9 @@ def main():
     serialNumber = hardwareinfo["SPHardwareDataType"][0]["serial_number"]
     clientName = utils.get_comnputer_name()
     
-    url = "/api/report/" + serialNumber
+    url = "/api/report"
 
-    data = {"runtype": RUNTYPE, "submission_type": "postflight", "name": clientName, "base64bz2report": report}
+    data = {"runtype": RUNTYPE, "serial": serialNumber, "submission_type": "postflight", "name": clientName, "base64bz2report": report}
     
     resc = utils.send_data(url, data)
     if resc.status_code != 204:
