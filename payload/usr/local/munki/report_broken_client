@@ -32,9 +32,9 @@ def main():
     serialNumber = get_hardware_info().serial_number
     clientName = get_comnputer_name()
 
-    url = "/api/report"
+    url = "/api/report/"+serialNumber
 
-    data = {"runtype": RUNTYPE, "name": clientName, "serial": serialNumber}
+    data = {"runtype": RUNTYPE, "name": clientName}
 
     resc = utils.send_data(url, data)
     if resc.status_code != 204:
