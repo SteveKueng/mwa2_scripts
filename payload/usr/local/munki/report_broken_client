@@ -3,6 +3,7 @@
 import sys
 import subprocess
 import plistlib
+import requests
 
 from mwa2 import utils
 
@@ -36,9 +37,14 @@ def main():
 
     data = {"runtype": RUNTYPE, "name": clientName}
 
-    resc = utils.send_data(url, data)
-    if resc.status_code != 204:
-        raise BaseException
+    try:
+        resc = utils.send_data(url, data)
+        if resc.status_code != 204:
+            print "send data error: %s" % resc.status_code
+    except requests.ConnectionError as error:
+        print "could not connect to server"
+    except Exception as error:
+        print "unknow error: %s" % error
 
 if __name__ == "__main__":
     main()
