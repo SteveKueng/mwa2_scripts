@@ -54,7 +54,11 @@ def pref(pref_name):
     return pref_value
 
 def send_data(url, data):
-    return requests.post(pref('ServerURL') + url, data=data, headers={'Authorization': pref('authKey')})
+    s = requests.Session()
+    s.headers.update({'Authorization': pref('authKey')})
+    response = s.post(pref('ServerURL') + url, data=data)
+    response.connection.close()
+    return response
 
 def mwa_available():
     """ check if server available """

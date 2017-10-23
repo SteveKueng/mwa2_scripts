@@ -59,7 +59,7 @@ def main():
         if resc.status_code != 204:
             print "send data error: %s" % resc.status_code
     except requests.ConnectionError as error:
-        print "could not connect to server"
+        print error
     except Exception as error:
         print "unknow error: %s" % error
 
