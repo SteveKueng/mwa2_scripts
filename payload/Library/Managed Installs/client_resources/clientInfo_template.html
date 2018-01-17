@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Machine Info</title>
+
+    <link charset="utf-8" rel="stylesheet" type="text/css" href="base.css" />
+    <link charset="utf-8" rel="stylesheet" type="text/css" href="detail.css" />
+    <script src="qrcode.min.js"></script>
+</head>
+
+<body class="product software">
+    <div id="page">
+        <div id="wrapper">
+            <div id="content">
+                <div class="background"></div>
+                <div class="columns">
+
+                    <div class="main">
+                        <div class="product-detail">
+                            <div class="lockup product">
+                                <div class="artwork">
+                                    <img width="175" height="175" alt="" class="artwork" src="https://support.apple.com/kb/securedImage.jsp?configcode=GTFJ&size=240x240" />
+                                </div>
+                            </div>
+
+                            <div class="product-info box-flex">
+                                <div class="product-review">
+                                    <div class="title">
+                                        <h1>{hostname}</h1>
+                                    </div>
+                                    <p class="more-text">
+                                        <table>
+                                            <tr>
+                                                <th>Serial: </th>
+                                                <td>{serial_number}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Model: </th>
+                                                <td>{machine_model}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>OS: </th>
+                                                <td>{os_vers}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Munki: </th>
+                                                <td>{munki_version}</td>
+                                            </tr>
+                                        </table>
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="qrcode"></div>
+                            <script type="text/javascript">
+                            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                                text: "{serial_number}",
+                                width: 128,
+                                height: 128,
+                                colorDark : "#000000",
+                                colorLight : "#ffffff",
+                                correctLevel : QRCode.CorrectLevel.H
+                            });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
