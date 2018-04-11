@@ -5,7 +5,6 @@ import subprocess
 import plistlib
 import base64
 import bz2
-import requests
 
 from mwa2 import utils
 
@@ -29,16 +28,6 @@ def get_hardware_info():
     except BaseException:
         return {}
 
-def generate_client_info(reportplist):
-    try:
-        file = open(/Library/Managed Installs/clientInfo/clientInfo_template.html, "r") 
-        text = file.read()
-        file.close()
-    except:
-        pass
-    else:
-        text.format(**reportplist['MachineInfo'])
-
 def main():
     """ main """
     RUNTYPE = "unknown"
@@ -58,20 +47,12 @@ def main():
     report = base64bz2report.replace(" ", "+")
     
     serialNumber = hardwareinfo["SPHardwareDataType"][0]["serial_number"]
-    clientName = utils.get_comnputer_name()
+    clientName = utils.get_computer_name()
     
     url = "/api/report/"+serialNumber
-
     data = {"runtype": RUNTYPE, "submission_type": "postflight", "name": clientName, "base64bz2report": report}
-    
-    try:
-        resc = utils.send_data(url, data)
-        if resc.status_code != 204:
-            print "send data error: %s" % resc.status_code
-    except requests.ConnectionError as error:
-        print error
-    except Exception as error:
-        print "unknow error: %s" % error
+    resc = utils.send_data(url, data)
+
 
 if __name__ == "__main__":
     main()

@@ -3,7 +3,6 @@
 import sys
 import subprocess
 import plistlib
-import requests
 
 from mwa2 import utils
 
@@ -24,14 +23,6 @@ def get_hardware_info():
     except BaseException:
         return {}
 
-def check_mdm():
-    '''recheck mdm'''
-    cmd = ['/usr/libexec/mdmclient', 'nop']
-    proc = subprocess.Popen(cmd, shell=False, bufsize=-1,
-                            stdin=subprocess.PIPE,
-                            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    (output, dummy_error) = proc.communicate()
-
 def main():
     """ main """
     RUNTYPE = "unknown"
@@ -39,25 +30,12 @@ def main():
         RUNTYPE = sys.argv[1]
 
     serialNumber = get_hardware_info().serial_number
-    clientName = utils.get_comnputer_name()
+    clientName = utils.get_computer_name()
 
     url = "/api/report/"+serialNumber
     data = {"runtype": RUNTYPE, "submission_type": "preflight", "name": clientName}
+    resc = utils.send_data(url, data)
 
-    try:
-        check_mdm()
-    except Exception as error:
-        print "mdm check error: %s" % error
-        pass
-
-    try:
-        resc = utils.send_data(url, data)
-        if resc.status_code != 204:
-            print "send data error: %s" % resc.status_code
-    except requests.ConnectionError as error:
-        print error
-    except Exception as error:
-        print "unknow error: %s" % error
 
 if __name__ == "__main__":
     main()

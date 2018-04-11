@@ -3,7 +3,6 @@
 import sys
 import subprocess
 import plistlib
-import requests
 
 from mwa2 import utils
 
@@ -31,20 +30,11 @@ def main():
         RUNTYPE = sys.argv[1]
 
     serialNumber = get_hardware_info().serial_number
-    clientName = get_comnputer_name()
+    clientName = get_computer_name()
 
     url = "/api/report/"+serialNumber
-
     data = {"runtype": RUNTYPE, "name": clientName}
-
-    try:
-        resc = utils.send_data(url, data)
-        if resc.status_code != 204:
-            print "send data error: %s" % resc.status_code
-    except requests.ConnectionError as error:
-        print "could not connect to server"
-    except Exception as error:
-        print "unknow error: %s" % error
+    resc = utils.send_data(url, data)
 
 if __name__ == "__main__":
     main()

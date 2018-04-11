@@ -2,6 +2,7 @@
 """ munkiwebadmin utils.py """
 
 import subprocess
+import urllib
 import urllib2
 import requests
 from Foundation import *
@@ -54,11 +55,19 @@ def pref(pref_name):
     return pref_value
 
 def send_data(url, data):
-    s = requests.Session()
-    s.headers.update({'Authorization': pref('authKey')})
-    response = s.post(pref('ServerURL') + url, data=data)
-    response.connection.close()
-    return response
+    data = urllib.urlencode(data)
+    req = urllib2.Request(pref('ServerURL') + url, data)
+    req.add_header("Authorization", "%s" % pref('authKey'))
+
+    try:
+        resp = urllib2.urlopen(req)
+    except urllib2.HTTPError as e:
+        print e
+    except urllib2.URLError as e:
+        print e
+    else:
+        return resp
+    return None
 
 def mwa_available():
     """ check if server available """
@@ -73,7 +82,7 @@ def mwa_available():
     except urllib2.URLError as err: 
         return False
 
-def get_comnputer_name():
+def get_computer_name():
     '''Uses system profiler to get hardware info for this machine'''
     cmd = ['/usr/sbin/scutil', '--get', 'ComputerName']
     proc = subprocess.Popen(cmd, shell=False, bufsize=-1,
