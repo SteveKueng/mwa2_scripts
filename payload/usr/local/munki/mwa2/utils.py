@@ -4,7 +4,6 @@
 import subprocess
 import urllib
 import urllib2
-import requests
 from Foundation import *
 
 
